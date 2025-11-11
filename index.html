@@ -1,39 +1,90 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sanela Jovanović | Lean Life Coach</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
+  <!-- ===== HEADER ===== -->
   <header>
-    <h1>Sanela Jovanović</h1>
+    <div class="logo">Sanela Jovanović
+      <span>Lean Life Coach</span>
+    </div>
     <nav>
       <ul>
-        <li><a href="index.html">Pocetna</a></li>
-        <li><a href="o-meni.html">O meni</a></li>
-        <li><a href="usluge.html">Usluge</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="besplatno.html">Besplatno</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="index.html">POČETNA</a></li>
+        <li><a href="o-meni.html">O MENI</a></li>
+        <li><a href="usluge.html">USLUGE</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="besplatno.html">BESPLATNO</a></li>
+        <li><a href="kontakt.html">KONTAKT</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- ===== HERO SEKCIJA ===== -->
   <section class="hero">
-    <img src="assets/images/tvoja-fotografija.jpg" alt="Sanela Jovanović">
     <div class="hero-text">
-      <h2>Lean Life Coach</h2>
-      <p><em>"Tvoj put ka ravnoteži i rastu počinje ovde."</em></p>
-      <p>Pružam podršku ljudima i organizacijama da ostvare lični i profesionalni rast.</p>
+      <h1>Dobrodošli!</h1>
+      <p>Uz stručnu podršku i coaching pristup, zajedno stvaramo balans između ličnog i profesionalnog rasta. Tvoj put ka ispunjenju počinje ovde.</p>
+      <a href="kontakt.html" class="dugme">Prijavi se</a>
+    </div>
+    <div class="hero-image">
+      <img src="moja-slika.jpg" alt="Sanela Jovanović" width="300" style="border-radius:10px;">
     </div>
   </section>
 
+  <!-- ===== SEKCIJA USLUGE ===== -->
+  <section>
+    <h2>Programi i Usluge</h2>
+    <div class="program">
+      <p>Lean Life Coaching, Individualni coaching, Lični rast i razvoj, Odnosi i komunikacija, Postizanje ciljeva i finansijska stabilnost.</p>
+      <a href="usluge.html" class="dugme">Saznaj više</a>
+    </div>
+  </section>
+
+  <!-- ===== BLOG SEKCIJA ===== -->
+  <section>
+    <h2>Blog</h2>
+    <p>Inspirativni tekstovi, saveti i alati koji pomažu da unaprediš svoj život i karijeru.</p>
+    <a href="blog.html" class="dugme">Pročitaj više</a>
+  </section>
+
+  <!-- ===== BESPLATNI SADRŽAJ ===== -->
+  <section>
+    <h2>Besplatni Materijali</h2>
+    <p>Preuzmi korisne vodiče, vežbe i mini programe koji te vode ka ličnom rastu.</p>
+    <a href="besplatno.html" class="dugme">Pogledaj</a>
+  </section>
+
+  <!-- ===== KONTAKT I NEWSLETTER ===== -->
   <footer>
-    © 2025 Sanela Jovanović – Sva prava zadržana
+    <h2>Kontakt</h2>
+    <p>📞 063 720 9751 | ✉️ sanelajovanovic90@hotmail.com</p>
+    <div class="footer-icons">
+      <a href="#" title="Facebook"><i>📘</i></a>
+      <a href="#" title="Instagram"><i>📸</i></a>
+      <a href="#" title="LinkedIn"><i>💼</i></a>
+      <a href="#" title="YouTube"><i>▶️</i></a>
+    </div>
+
+    <div class="newsletter">
+      <h3>Prijava na Newsletter</h3>
+      <p>Ukoliko želite da putem e-maila dobijate obaveštenja o novim blogovima, programima i besplatnom sadržaju:</p>
+      <form>
+        <input type="text" placeholder="Ime" required><br>
+        <input type="text" placeholder="Prezime" required><br>
+        <input type="email" placeholder="Email adresa" required><br>
+        <button type="submit">Prijavi se na Newsletter</button>
+      </form>
+    </div>
+
+    <p style="margin-top:30px;">© 2025 Sanela Jovanović | Sva prava zadržana</p>
   </footer>
+
 </body>
 </html>

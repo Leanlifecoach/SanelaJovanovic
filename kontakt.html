@@ -5,43 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt | Sanela Jovanović</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
+  <!-- ===== HEADER ===== -->
   <header>
-    <h1>Sanela Jovanović</h1>
+    <div class="logo">Sanela Jovanović
+      <span>Lean Life Coach</span>
+    </div>
     <nav>
       <ul>
-        <li><a href="index.html">Pocetna</a></li>
-        <li><a href="o-meni.html">O meni</a></li>
-        <li><a href="usluge.html">Usluge</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="besplatno.html">Besplatno</a></li>
-        <li><a href="kontakt.html" class="active">Kontakt</a></li>
+        <li><a href="index.html">POČETNA</a></li>
+        <li><a href="o-meni.html">O MENI</a></li>
+        <li><a href="usluge.html">USLUGE</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="besplatno.html">BESPLATNO</a></li>
+        <li><a href="kontakt.html" class="active">KONTAKT</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="content">
-    <h2>Kontakt</h2>
-    <p>Rado ću odgovoriti na sva tvoja pitanja ili zakazati besplatni uvodni razgovor.</p>
+  <!-- ===== KONTAKT SEKCIJA ===== -->
+  <section class="kontakt" style="margin-top:130px; text-align:center;">
+    <h2>KONTAKT</h2>
+    <p>Ukoliko želite da me kontaktirate ili se prijavite na neki od programa, ispunite formu ispod.</p>
 
-    <form action="https://formsubmit.co/sanelajovanovic90@hotmail.com" method="POST" class="contact-form">
-      <input type="text" name="ime" placeholder="Vaše ime" required>
-      <input type="email" name="email" placeholder="Vaš email" required>
-      <textarea name="poruka" placeholder="Vaša poruka" rows="6" required></textarea>
-      <button type="submit" class="button">Pošalji poruku</button>
+    <form class="contact-form" action="https://formsubmit.co/sanelajovanovic90@hotmail.com" method="POST">
+      <label for="ime">Ime</label>
+      <input type="text" id="ime" name="ime" required>
+
+      <label for="prezime">Prezime</label>
+      <input type="text" id="prezime" name="prezime" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="poruka">Vaša poruka</label>
+      <textarea id="poruka" name="poruka" rows="5" required></textarea>
+
+      <button type="submit" class="btn">POŠALJI</button>
     </form>
 
-    <div class="contact-info">
-      <p><strong>Email:</strong> <a href="mailto:sanelajovanovic90@hotmail.com">sanelajovanovic90@hotmail.com</a></p>
-      <p><strong>Telefon:</strong> <a href="tel:+381637209751">063 720 9751</a></p>
+    <div class="newsletter">
+      <h3 style="margin-top:60px;">PRIJAVA NA NEWSLETTER</h3>
+      <p>Ukoliko želite da na svoj e-mail primate obaveštenja o novom blogu, programima i besplatnim sadržajima, prijavite se ispod.</p>
+      <form class="newsletter-form" action="https://formsubmit.co/sanelajovanovic90@hotmail.com" method="POST">
+        <label for="ime2">Ime</label>
+        <input type="text" id="ime2" name="ime2" required>
+
+        <label for="prezime2">Prezime</label>
+        <input type="text" id="prezime2" name="prezime2" required>
+
+        <label for="email2">Email</label>
+        <input type="email" id="email2" name="email2" required>
+
+        <button type="submit" class="btn">PRIJAVI SE NA NEWSLETTER</button>
+      </form>
     </div>
   </section>
 
+  <!-- ===== FOOTER ===== -->
   <footer>
-    © 2025 Sanela Jovanović – Sva prava zadržana
+    <h2>Kontakt</h2>
+    <p>📞 063 720 9751 | ✉️ sanelajovanovic90@hotmail.com</p>
+    <div class="footer-icons">
+      <a href="#"><i>📘</i></a>
+      <a href="#"><i>📸</i></a>
+      <a href="#"><i>💼</i></a>
+      <a href="#"><i>▶️</i></a>
+    </div>
+    <p style="margin-top:20px;">© 2025 Sanela Jovanović | Sva prava zadržana</p>
   </footer>
+
 </body>
 </html>
