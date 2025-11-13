@@ -233,136 +233,106 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
-/* KONTAKT STRANICA */
-
-.kontakt-naslov {
-  background-color: #f7e7e0; /* ista boja kao 'Dobrodošli' sekcija */
+/* === KONTAKT SEKCIJA === */
+.kontakt-section {
+  background-color: #fce4ec;
+  padding: 80px 20px;
   text-align: center;
-  padding: 60px 20px;
 }
 
-.kontakt-naslov h2 {
-  color: #b15b5b;
-  font-size: 36px;
-  margin: 0;
-}
-
-.kontakt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 20px;
-}
-
-.kontakt-tekst {
-  text-align: center;
-  max-width: 700px;
-  margin-bottom: 30px;
-  font-size: 18px;
-  color: #333;
-}
-
-.kontakt-forma {
-  background-color: #fff;
-  border: 1px solid #b15b5b;
-  border-radius: 10px;
-  padding: 30px;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.kontakt-forma form {
-  display: flex;
-  flex-direction: column;
-}
-
-.kontakt-forma label {
-  margin-top: 10px;
+.kontakt-section h2 {
+  font-size: 2rem;
   color: #444;
+  margin-bottom: 10px;
+}
+
+.kontakt-section p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.kontakt-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.kontakt-form label {
+  text-align: left;
+  color: #333;
   font-weight: 600;
 }
 
-.kontakt-forma input,
-.kontakt-forma textarea {
-  margin-top: 5px;
-  padding: 10px;
+.kontakt-form input,
+.kontakt-form textarea {
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  font-family: inherit;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
-.kontakt-forma button {
-  margin-top: 20px;
-  background-color: transparent;
-  color: #b15b5b;
-  border: 2px solid #b15b5b;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
+.posalji-btn {
+  background-color: #ea9999;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
+  border-radius: 6px;
 }
 
-.kontakt-forma button:hover {
-  background-color: #b15b5b;
-  color: #fff;
+.posalji-btn:hover {
+  background-color: #d47979;
 }
 
-/* NEWSLETTER */
-.newsletter {
-  background-color: #fffaf8;
+/* === NEWSLETTER === */
+.newsletter-section {
+  padding: 60px 20px;
+  background-color: #fff;
   text-align: center;
-  padding: 50px 20px;
 }
 
-.newsletter h3 {
-  color: #b15b5b;
-  font-size: 24px;
+.newsletter-section h3 {
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.newsletter-section p {
+  color: #555;
   margin-bottom: 20px;
 }
 
-.newsletter form {
+.newsletter-form {
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 400px;
-  margin: 0 auto;
+  gap: 12px;
 }
 
-.newsletter label {
-  align-self: flex-start;
-  font-weight: 600;
-  margin-top: 10px;
-  color: #444;
-}
-
-.newsletter input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
+.newsletter-form input {
+  padding: 12px;
   border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
-.newsletter button {
-  margin-top: 20px;
-  background-color: transparent;
-  border: 2px solid #b15b5b;
-  color: #b15b5b;
-  padding: 10px 25px;
-  border-radius: 5px;
-  font-weight: bold;
+.newsletter-btn {
+  background-color: #ea9999;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-.newsletter button:hover {
-  background-color: #b15b5b;
-  color: #fff;
-
+.newsletter-btn:hover {
+  background-color: #d47979;
 }
 
 /* ======== DRUŠTVENE MREŽE ======== */
