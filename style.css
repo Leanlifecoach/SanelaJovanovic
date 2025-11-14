@@ -336,3 +336,64 @@ footer {
     background: #c78f8f;
     color: white;
 }
+/* -------------------------------------- */
+/*  BLOG STRANICA — centriranje i okvir  */
+/* -------------------------------------- */
+
+.blog-section {
+    width: 80%;
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.blog-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 50px; /* veći razmak između tema */
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.blog-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+
+.blog-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.blog-item p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Dugme — isto kao na uslugama */
+.blog-item .btn-outline {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 2px solid #c78f8f;
+    color: #c78f8f;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+}
+
+.blog-item .btn-outline:hover {
+    background: #c78f8f;
+    color: white;
+}
+
+/* Mobilna verzija */
+@media (max-width: 900px) {
+    .blog-section {
+        width: 90%;
+    }
+}
