@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontakt | Sanela Jovanović</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("4uyBorM80aEJgDm_8"); // PUBLIC KEY
+        })();
+    </script>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="logo-container">
         <div class="logo">Sanela Jovanović</div>
@@ -23,82 +30,115 @@
             <li><a href="usluge.html">USLUGE</a></li>
             <li><a href="blog.html">BLOG</a></li>
             <li><a href="besplatno.html">BESPLATNO</a></li>
-            <li><a href="kontakt.html" class="active">KONTAKT</a></li>
+            <li><a class="active" href="kontakt.html">KONTAKT</a></li>
         </ul>
     </nav>
 
     <div class="hamburger" onclick="document.getElementById('nav-menu').classList.toggle('show')">
-        <div></div><div></div><div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 </header>
 
-<!-- INTRO -->
 <section class="page-intro">
     <h1>Kontakt</h1>
-    <p class="subtitle">Tu sam da odgovorim na svako pitanje.</p>
+    <p class="subtitle">Radujem se vašoj poruci ❤</p>
 </section>
 
-<!-- KONTAKT SEKCIJA -->
 <section class="contact-section">
 
     <div class="contact-wrapper">
 
-        <!-- FORMULAR -->
+        <!-- KONTAKT FORMA -->
         <div class="contact-form">
-            <h2>Pošalji poruku</h2>
+            <h2>Pošaljite poruku</h2>
 
-            <form action="https://formsubmit.co/sanelajovanovic90@hotmail.com" method="POST">
-
-                <label for="ime">Ime i prezime:</label>
-                <input type="text" id="ime" name="ime" required>
+            <form id="contactForm">
+                <label for="name">Ime i prezime:</label>
+                <input type="text" id="name" name="name" required />
 
                 <label for="email">Email adresa:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required />
 
-                <label for="poruka">Poruka:</label>
-                <textarea id="poruka" name="poruka" rows="6" required></textarea>
+                <label for="message">Vaša poruka:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
 
-                <button type="submit" class="btn-submit">Pošalji</button>
-
-                <!-- SKRIVENA PODEŠAVANJA -->
-                <input type="hidden" name="_next" value="https://leanlifecoach.github.io/SanelaJovanovic/hvala.html">
-                <input type="hidden" name="_captcha" value="false">
+                <button type="submit" class="btn-submit">Pošalji poruku</button>
             </form>
+
+            <p id="form-status" style="margin-top:15px; font-weight:bold;"></p>
         </div>
 
         <!-- NEWSLETTER -->
         <div class="newsletter-box">
             <h2>Prijava na newsletter</h2>
 
-            <form action="https://formsubmit.co/sanelajovanovic90@hotmail.com" method="POST">
+            <form id="newsletterForm">
+                <label for="nl-name">Ime i prezime:</label>
+                <input type="text" id="nl-name" name="name" required />
 
-                <label for="newsletter-email">Email adresa:</label>
-                <input type="email" id="newsletter-email" name="email" required>
+                <label for="nl-email">Email:</label>
+                <input type="email" id="nl-email" name="email" required />
 
-                <button type="submit" class="btn-submit">Prijavi me</button>
-
-                <!-- SKRIVENA PODEŠAVANJA -->
-                <input type="hidden" name="_next" value="https://leanlifecoach.github.io/SanelaJovanovic/hvala.html">
-                <input type="hidden" name="_captcha" value="false">
+                <button type="submit" class="btn-submit">Prijavi se</button>
             </form>
+
+            <p id="newsletter-status" style="margin-top:15px; font-weight:bold;"></p>
         </div>
 
     </div>
 
-    <!-- DRUŠTVENE MREŽE -->
+    <!-- IKONICE DRUŠTVENIH MREŽA -->
     <div class="social-links">
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">YouTube</a>
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">YouTube</a>
     </div>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
     <p>© 2025 Sanela Jovanović | Lean Life Coach</p>
 </footer>
+
+<!-- EMAILJS – FUNKCIJE -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.send("service_gvtuiiq", "template_6vy581d", {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    })
+    .then(() => {
+        document.getElementById("form-status").textContent = "Poruka je uspešno poslata!";
+        document.getElementById("contactForm").reset();
+    })
+    .catch(() => {
+        document.getElementById("form-status").textContent = "Došlo je do greške. Pokušajte ponovo.";
+    });
+});
+
+document.getElementById("newsletterForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.send("service_gvtuiiq", "template_6vy581d", {
+        name: document.getElementById("nl-name").value,
+        email: document.getElementById("nl-email").value,
+        message: "Newsletter prijava"
+    })
+    .then(() => {
+        document.getElementById("newsletter-status").textContent = "Uspešno ste prijavljeni!";
+        document.getElementById("newsletterForm").reset();
+    })
+    .catch(() => {
+        document.getElementById("newsletter-status").textContent = "Greška. Pokušajte ponovo.";
+    });
+});
+</script>
 
 </body>
 </html>
