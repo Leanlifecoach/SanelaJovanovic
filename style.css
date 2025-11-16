@@ -122,14 +122,16 @@ nav a.active {
 }
 
 .index-img img {
-    width: 100%;
-    max-width: 420px;
+    width: 350%;
+    height: auto;
     border-radius: 10px;
 }
 
 .index-text {
+   flex: 1;
     max-width: 500px;
     text-align: center;
+   font-size: 18px
 }
 
 /* Dugme */
