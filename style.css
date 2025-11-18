@@ -107,60 +107,64 @@ nav a.active {
 ========================================================= */
 
 .index-wrapper {
-    width: 80%;
-    max-width: 1200px;
+    width: 85%;
     margin: 60px auto;
     display: flex;
     gap: 40px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
+/* Blok slike */
 .index-img {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
+/* Slika */
 .index-img img {
     width: 100%;
-    max-width: 420px;
+    max-width: 350px;   /* Veličina slike - idealna */
     height: auto;
     border-radius: 10px;
 }
 
+/* Tekst */
 .index-text {
     flex: 1;
     max-width: 500px;
-    text-align: center;
-    font-size: 19px
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 /* Dugme */
 .btn-outline {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: 2px solid var(--gold);
-    color: #333;
-    text-decoration: none;
+    margin-top: 22px;
+    padding: 10px 24px;
+    border: 2px solid var(--accent);
+    color: var(--accent);
     font-weight: bold;
-    border-radius: 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
 .btn-outline:hover {
-    background: var(--gold);
+    background-color: var(--accent);
     color: white;
 }
 
+/* MOBILNA VERZIJA */
 @media (max-width: 900px) {
     .index-wrapper {
         flex-direction: column;
         text-align: center;
     }
 
-    .index-img img {
-        width: 250px;
+    .index-text {
+        max-width: 100%;
     }
 }
 
